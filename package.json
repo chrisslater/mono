@@ -1,0 +1,11 @@
+{
+  "name": "mono",
+  "packageManager": "yarn@3.2.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "typescript": "next"
+  }
+}
