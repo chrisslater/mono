@@ -21,7 +21,7 @@ export class AppController {
     
     const email = tryCatch<Entities.Email>(
       (error) => {
-        console.log('hello')
+        console.log('hello friend')
         if (error instanceof Entities.IsNotEmail) {
           throw new HttpException('Not valid email syntax', HttpStatus.BAD_REQUEST);
         }

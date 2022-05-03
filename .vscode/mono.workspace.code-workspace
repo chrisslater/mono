@@ -9,13 +9,12 @@
 			"name": "example-service"
 		}
 	],
-
-	// "settings": {
-	// 	"typescript.tsdk": ".yarn/sdks/typescript/lib",
-	// 	"search.exclude": {
-	// 		"**/.yarn": true,
-	// 		"**/.pnp.*": true
-	// 	  },
-	// 	"typescript.enablePromptUseWorkspaceTsdk": true	
-	// }
+	"settings": {
+		"search.exclude": {
+			"**/.yarn": true,
+			"**/.pnp.*": true
+		  },
+		  "typescript.tsdk": "ROOT/.yarn/sdks/typescript/lib",
+		  "typescript.enablePromptUseWorkspaceTsdk": true	
+	}
 }

@@ -20,6 +20,7 @@ export default {
     },
     mode: "development",
     devtool: 'inline-source-map',
+    target: 'node',
     // entry: ['webpack/hot/poll?100', './src/main.ts'],
 
     entry: './src/main.ts',
@@ -36,15 +37,13 @@ export default {
     },
     resolve: {
       alias: {
-        "@snapperfish/entities": '../../../packages/entities/ts'
+        "@snapperfish/entities": path.join(__dirname, '../../packages/entities/ts'),
       },
       extensions: [".ts"]
     },
 
     externals: [
-      WebpackPnpExternals({
-        exclude: ['webpack/hot/poll?100']
-      })
+      WebpackPnpExternals()
     ],
 
     plugins: [
@@ -58,16 +57,15 @@ export default {
       }),
     ],
 
-    experiments: {
-      outputModule: true,
-    },
+    // experiments: {
+    //   outputModule: true,
+    // },
 
     output: {
       path: outputDir,
       filename: outputFilename,
       // library: { type: 'module' },
       chunkFormat: false,
-      module: true,
+      // module: true,
     },
-    target: 'es2020'
   };
