@@ -1,19 +1,8 @@
 {
   "name": "@snapperfish/entities",
   "packageManager": "yarn@3.2.0",
-  "type": "module",
   "main": "./esm/main.js",
   "module": "./esm/main.js",
-  "types": "./types/esm/main.d.ts",
-  "exports": {
-    ".": {
-      "types": "./types/esm/main.d.ts",
-      "import": "./esm/main.js"
-    },
-    "./email*": {
-      "import": "./esm/email.js"
-    }
-  },
   "devDependencies": {
     "typescript": "next"
   }

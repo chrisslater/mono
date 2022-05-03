@@ -7,6 +7,7 @@ const __dirname = path.dirname(__filename)
 
 export default {
     mode: "development",
+    devtool: 'inline-source-map',
   entry: './src/main.ts',
   module: {
     rules: [{ 
@@ -21,7 +22,7 @@ export default {
   },
   resolve: {
     alias: {
-      '@snapperfish/entities': path.resolve(__dirname, '../../packages/entities'),
+      "@snapperfish/entities": '../../../packages/entities/ts'
     },
     extensions: [".ts"]
   },
