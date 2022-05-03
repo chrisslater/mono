@@ -1,9 +1,10 @@
 {
   "name": "@snapperfish/entities",
   "packageManager": "yarn@3.2.0",
+  "type": "module",
   "main": "./esm/main.js",
   "module": "./esm/main.js",
   "devDependencies": {
-    "typescript": "next"
+    "typescript": "*"
   }
 }

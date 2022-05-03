@@ -15,16 +15,13 @@ const tryCatch = <T>(catchFn: (err: Error) => T) => (tryFn: () => T): T => {
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
-
   @Get(':email')
   getWelcomeByRole(@Param('email') maybeEmail: string) {
+
     
     const email = tryCatch<Entities.Email>(
       (error) => {
+        console.log('hello')
         if (error instanceof Entities.IsNotEmail) {
           throw new HttpException('Not valid email syntax', HttpStatus.BAD_REQUEST);
         }
